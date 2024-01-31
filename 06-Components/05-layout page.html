@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>app layout </title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 24px;
+    font-family: sans-serif;
+    color: #343a40;
+    height: 100vh;
+    font-weight: bold;
+    text-align: center;
+
+
+    display: grid;
+    grid-template-columns: 80px 400px 1fr 250px;
+    grid-template-rows: 80px 1fr;
+  }
+
+  nav {
+    background-color: #343a40;
+    grid-row: 1/-1;
+  }
+
+  menu {
+    background-color: #7048e0;
+    grid-column: 2/-1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 40px;
+
+  }
+
+
+  section {
+    background-color: #e9ecef;
+    padding: 40px;
+    overflow: scroll;
+    /* QUESTO MI SERVE PER AVERE LO SCROL CON IL MOUSE */
+    /* scroll-behavior: smooth; */
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  aside {
+    background-color: #e9ecef;
+  }
+
+  nav,
+  section,
+  main,
+  aside {
+    padding-top: 24px;
+  }
+
+  button {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #6741d9;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px 12px;
+  }
+
+  button:last-child {
+    background-color: red;
+    margin-left: auto;
+    /* METTENDO MARGIN LEFT AUTO QUESTO CI PORTA L ULTIMO ELEMENTO ALLA FINE DEL CONTENITORE PER TUTTA LA SUA LARGHEZZA */
+  }
+
+  .email {
+    background-color: #adb5ad;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /* QUESTO CI SERVE PER  LO SCROL SOLO PERCHE ABBIAMO UTILIZATO IL DISPLAY FLEX */
+  }
+</style>
+
+<body>
+  <nav>NAV</nav>
+  <menu>
+    <button>New</button>
+    <button>Reply</button>
+    <button>Forward</button>
+    <button>Mark Unread</button>
+    <button class="btn-right">Trash</button>
+  </menu>
+  <section>
+    <div class="email">Email 1</div>
+    <div class="email">Email 2</div>
+    <div class="email">Email 3</div>
+    <div class="email">Email 4</div>
+    <div class="email">Email 5</div>
+    <div class="email">Email 6</div>
+    <div class="email">Email 7</div>
+    <div class="email">Email 8</div>
+    <div class="email">Email 9</div>
+    <div class="email">Email 10</div>
+  </section>
+  <main>Email view</main>
+  <aside>Additional info </aside>
+</body>
+
+</html>
